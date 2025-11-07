@@ -205,3 +205,36 @@ ICON_SETS_RECOMMENDED = {
   "policies": ["policy","warning","gavel","security"],
   "footer": ["fingerprint","info","policy","gavel","help","send"]
 }
+# ===================== FOOTER ICON MANDATORY RULE =====================
+
+FOOTER_ICON_RULE = {
+  "REQUIRED": true,
+  "DESCRIPTION": "Footer phải luôn có icon ở mỗi nhóm. Không được phép bỏ, giản lược, hoặc thay thế.",
+  
+  "PLACEMENT": "Mỗi cột trong footer phải có 1 icon đặt TRƯỚC tiêu đề, căn giữa (text-align:center). Icon nằm trên, tiêu đề nằm dưới.",
+  
+  "STYLE": {
+    "TYPE": "Material Symbols Rounded",
+    "SIZE_DESKTOP": "34px",
+    "SIZE_MOBILE": "28px",
+    "COLOR": "ACCENT (#0A84FF)",
+    "WEIGHT": "400",
+    "FILL": "1",
+    "GRADE": "0"
+  },
+  
+  "COLUMNS": {
+    "COLUMN_1": "icon 'fingerprint'",
+    "COLUMN_2": "icon 'info'",
+    "COLUMN_3": "icon 'policy'",
+    "COLUMN_4": "icon 'send'"
+  }
+}
+
+RULE_FOOTER_ICON_BEHAVIOR:
+- Bắt buộc hiển thị icon trong mỗi cột của footer.
+- Không được hợp nhất icon hoặc dùng chung icon giữa các cột.
+- Không được bỏ icon vì bất kỳ lý do gì.
+- Icon phải nằm giữa (center), cách tiêu đề 8–12px.
+- Nếu Gemini nghi ngờ icon trùng → vẫn phải render đúng danh sách tôi yêu cầu.
+- Footer sẽ lỗi nếu thiếu icon → vì vậy Gemini phải sinh đầy đủ.
