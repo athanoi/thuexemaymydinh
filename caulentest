@@ -1,0 +1,207 @@
+Bạn là trình tạo HTML one-file.
+
+NHIỆM VỤ:
+- Xuất đúng 1 file `index.html` (HTML + CSS + JS đều nội tuyến).
+- Không dùng jQuery/Bootstrap. Không fetch/AJAX. Cho phép nhúng **font** từ CDN (Inter, Material Symbols Rounded, Font Awesome 6 Free) và **iframe bản đồ**.
+- Tất cả JS gói trong IIFE, đặt ngay trước `</body>` (không dùng `defer`).
+- Văn bản tiếng Việt tự nhiên, KHÔNG chứa “ạ/nhé/nha”.
+
+SEO / META:
+TITLE="Cho thuê xe máy Hà Nội – Nguyễn Tú (Liên hệ)"
+DESCRIPTION="Thuê xe máy tại Hoàn Kiếm, Hà Nội. Xe số, xe ga, xe 50cc, xe điện. Giao tận nơi 20–40 phút, cọc nhẹ, hỗ trợ 24/7."
+KEYWORDS="thuê xe máy Hoàn Kiếm, thuê xe máy Hà Nội, xe ga, xe số, xe điện, thuê xe máy Nguyễn Tú, cho thuê xe máy giá rẻ"
+PHONE="0942467674"
+ZALO="https://zalo.me/0942467674"
+MAP="https://maps.app.goo.gl/SR1hcwnCQjPkAvDh7?g_st=ipc"
+EMAIL="thuexemaynguyentu@gmail.com"
+ADDRESS_MAIN="Ngõ Hài Tượng, Phố Cổ, Hoàn Kiếm, Hà Nội"
+ADDRESS_BRANCH="112 Nguyễn Văn Cừ, Long Biên, Hà Nội"
+LOGO_URL="https://thuexemaynguyentu.com/wp-content/uploads/2025/09/cropped-Thue-xe-may-min-1-1.png"
+OG_IMAGE="https://thuexemaynguyentu.com/wp-content/uploads/2025/09/BANNER-THUE-XE-MAY-1.png"
+
+STYLE_PRESET="ProUltraTitanBlue"
+ACCENT="#0A84FF"
+ACCENT2="#1B5FFF"
+RADIUS="18px"
+LANG="vi"
+
+TÙY CHỌN:
+USE_CHAT=false          # UI mô phỏng nếu cần, không gọi API
+USE_QUICKCALL=true
+USE_PRODUCTS=true       # thẻ tĩnh
+USE_CARD_TILT=true
+USE_SCROLL_ANIM=true
+USE_VIEW_TRANSITIONS=true
+USE_GALLERY_LIGHTBOX=true
+USE_PARALLAX=false
+USE_CONTACT_FORM=true   # gửi qua mailto: hoặc tel/zalo
+USE_MAP_EMBED=true
+
+MENU_CHINH = [
+  {"🏠 Trang chủ":"#home"},
+  {"📄 Giới thiệu":"#gioithieu"},
+  {"🏷️ Bảng giá":"#banggia"},
+  {"❓ FAQ":"#faq"},
+  {"⚖️ Chính sách & Điều khoản":[
+    {"📜 Chính sách thuê xe":"#chinhsach"},
+    {"⚖️ Điều khoản dịch vụ":"#dieukhoan"},
+    {"🔒 Chính sách bảo mật":"#baomat"}
+  ]},
+  {"💬 Liên hệ":"#lienhe"}
+]
+
+HERO:
+- Gradient xanh titan (#0A84FF → #1B5FFF → #111826)
+- H1 = TITLE (đồng bộ)
+- Mô tả: "📍 Xe mới, giao nhanh, giá hợp lý, hỗ trợ 24/7."
+- CTA: tel:PHONE, ZALO
+- Chips: ⚡ Giao nhanh 20’, 💰 Cọc nhẹ, 🛵 Xe ga/xe số, 🚚 Giao tận nơi
+- Mini-form “🧭 Gợi ý lịch trình” (3 input + nút; không gửi, chỉ UI)
+
+SECTIONS:
+1) Vì sao chọn chúng tôi — 6 lợi ích (verified, headset_mic, location_on, workspace_premium, shield, timer)
+2) Dịch vụ nổi bật — Card tilt + CTA “Xem chi tiết” → `#dichvu`
+3) Bảng giá tóm tắt — CTA “Xem chi tiết” → `#banggia`
+4) Quy trình thuê xe — 4 bước (fade-slide)
+5) Đánh giá khách hàng — Slider ⭐⭐⭐⭐⭐ (3 feedback thực)
+6) FAQ — 5 câu
+7) Điều khoản dịch vụ — `#dieukhoan`
+8) Chính sách bảo mật — `#baomat`
+
+FOOTER (4 cột):
+- Cột 1: Title+desc
+- Cột 2: Links nội bộ
+- Cột 3: Chính sách/Điều khoản/FAQ/Liên hệ
+- Cột 4: Form (Họ tên, Số điện thoại, Nội dung) + social_links
+
+SOCIAL_LINKS = [
+  "https://thuexemaynguyentu.com",
+  "https://www.tripadvisor.com.vn/Attraction_Review-g21333608-d9826317-Reviews-Nguyen_Tu_Motorbike_Rental-Long_Bien_Hanoi.html",
+  "https://www.youtube.com/channel/UCvUBwV24U4c5-q1iJ-ZL0Rg",
+  "https://www.instagram.com/thuexemaynguyentu/",
+  "https://www.pinterest.com/thuexemaynguyentu/"
+]
+
+HIỆU ỨNG:
+- Card tilt GPU, hover ánh xanh titan; scroll animation; viewTransition fade
+- Input glass blur, outline #0A84FF; footer hover bạc
+- Responsive + iOS safe-area
+- A11y: focus rõ, prefers-reduced-motion giảm hiệu ứng
+
+QUICKCALL (bên trái, glass blur):
+- 3 nút: 📞 tel:PHONE, 💬 ZALO, 📍 MAP
+- Né chat, auto ẩn khi bàn phím bật
+
+Lưu ý:
+- **Không nhúng script ngoài** (ngoại trừ **font CDN**).
+- JS nội tuyến IIFE, không `defer`.
+- Tất cả link chi tiết dùng anchor trong trang.
+- Form liên hệ dùng `mailto:` hoặc CTA Tel/Zalo.
+- Sinh `index.html` one-file hoàn chỉnh (menu + hero + quickcall + body + footer).
+# ===================== FOOTER 4-COLUMN RENDER RULE =====================
+BẮT BUỘC SINH FOOTER 4 CỘT:
+
+Footer phải có dạng Grid 4 cột đều nhau (auto responsive):
+- Desktop: grid-template-columns: repeat(4, 1fr)
+- Tablet: 2 cột
+- Mobile: 1 cột
+
+Footer gồm đúng 4 nhóm:
+1) Tagline (title + description)
+2) Links nội bộ (Trang chủ, Giới thiệu, Bảng giá)
+3) Links chính sách (FAQ, Chính sách thuê xe, Điều khoản, Chính sách bảo mật, Liên hệ)
+4) Form liên hệ + social icons
+
+Tất cả nội dung footer phải:
+- Có tiêu đề nhóm
+- Có icon Material Symbols hoặc Font Awesome
+- Dùng glassmorphism nhẹ + radius + accent màu TitanBlue
+- Responsive đầy đủ
+- Không được lược bỏ dù bất cứ lý do gì
+- Không được gộp thành ít hơn hoặc nhiều hơn 4 cột
+- Không được tạo accordion trừ khi ở mobile (auto)
+
+# ===================== CREATIVE / STYLE EXPANSION =====================
+
+Bạn được phép sáng tạo giao diện trong phạm vi ONE-FILE, nhưng không được phá vỡ cấu trúc chung.  
+Tăng cường khả năng thẩm mỹ và tự tối ưu:
+
+CREATIVE_MODE = {
+  "ENABLE": true,
+  "ALLOWED": [
+    "Thay đổi CSS cho hợp lý hơn mà vẫn theo tông TitanBlue",
+    "Thêm hiệu ứng mới nếu tăng UX (hover, glow, ripple, tilt, blur)",
+    "Tinh chỉnh layout để cân đối hơn",
+    "Tự căn lại spacing, padding, line-height",
+    "Tự thêm micro-interactions (transition mềm, scaling nhẹ)",
+    "Nâng cấp glassmorphism (multi-layer, blur gradient)",
+    "Bổ sung shadow hợp lý (ambient, soft-drop)"
+  ],
+  "NOT_ALLOWED": [
+    "Không thêm file ngoài trừ font CDN",
+    "Không AJAX, không fetch dữ liệu",
+    "Không tạo thêm trang mới",
+    "Không thay đổi text content gốc nếu không yêu cầu",
+    "Không chèn script src ngoài"
+  ]
+}
+
+CSS_STYLE_VARIANTS = [
+  "UltraGlassLayered",
+  "TitanBlueDeepGlow",
+  "CarbonSoftShadow",
+  "MinimalNeoWhite",
+  "DarkAeroGlass",
+  "SunsetNeoGradient",
+  "FrostedSilverGlass",
+  "VantaCarbonGlass",
+  "AeroBlueFeather",
+  "HyperSoftMorphism"
+]
+
+RULE:  
+Gemini được phép chọn 1–2 style từ danh sách trên và **pha trộn** để tạo giao diện đẹp hơn, miễn không làm bố cục bị rối.
+
+CODE_INTELLIGENCE = {
+  "AUTO_OPTIMIZE": true,
+  "FIX_LAYOUT_IF_NEEDED": true,
+  "BALANCE_COLORS": true,
+  "SMART_CONTRAST": true,
+  "JS_IMPROVE_INTERACTION": true,
+  "AVOID_OVER_EFFECTS": true
+}
+
+Nếu phát hiện phần CSS hoặc JS của tôi có thể thiết kế hợp lý hơn, hãy tự điều chỉnh theo best practice modern UI (glassmorphism + soft shadow + smooth motion) nhưng vẫn nằm trong ONE-FILE index.html.
+
+✅ 2) Font Awesome 6 Free — dùng cho social
+	•	Đẹp cho social logo (Facebook/Instagram/Youtube/Pinterest).
+	•	Nhưng không nên dùng đan xen với Material Symbols → sẽ loạn style.
+
+👉 Khuyến nghị:
+	•	UI chính, menu, card, CTA → Material Symbols Rounded
+	•	Social icons → Font Awesome (hợp lý, không mâu thuẫn)
+
+# ===================== ICON STYLE & CONSISTENCY =====================
+ICON_STYLE="Material Symbols Rounded"
+ICON_THEME="rounded"
+ICON_WEIGHT="400"
+ICON_FILL="1"
+ICON_GRADE="0"
+
+RULE_ICON:
+- Toàn bộ icon UI trên web (menu, hero, tính năng, bảng giá, quy trình, FAQ, chính sách, footer) dùng 100% Material Symbols Rounded.
+- Chỉ riêng mạng xã hội sử dụng Font Awesome 6 Free (Facebook, Instagram, YouTube, Pinterest).
+- Không được dùng lẫn lộn thêm bất kỳ bộ icon nào khác.
+- Icon phải đồng bộ kích thước (24–28px desktop, 22–24px mobile).
+- Icon có màu ACCENT (#0A84FF) khi hover; màu trắng hoặc xám nhạt khi bình thường.
+
+ICON_SETS_RECOMMENDED = {
+  "hero": ["phone_in_talk","chat_bubble","directions_bike","bolt","paid","location_on"],
+  "menu": ["home","info","sell","help","gavel","contact_support"],
+  "benefits": ["verified","headset_mic","workspace_premium","shield","timer","location_on"],
+  "pricing": ["price_change","two_wheeler","electric_moped","scooter"],
+  "steps": ["looks_one","looks_two","looks_3","done_all"],
+  "faq": ["help_center","question_mark","support_agent"],
+  "policies": ["policy","warning","gavel","security"],
+  "footer": ["fingerprint","info","policy","gavel","help","send"]
+}
