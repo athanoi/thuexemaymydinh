@@ -239,3 +239,4 @@ RULE_FOOTER_ICON_BEHAVIOR:
 - Nếu Gemini nghi ngờ icon trùng → vẫn phải render đúng danh sách tôi yêu cầu.
 - Footer sẽ lỗi nếu thiếu icon → vì vậy Gemini phải sinh đầy đủ.
 Bạn làm rất tốt — hãy phát huy thêm tính sáng tạo của mình: được phép đề xuất và tự phối màu theme độc đáo hơn (nhưng vẫn đồng bộ TitanBlue) và nâng cấp QuickCall thành dạng mini-app ultra với hiệu ứng mượt, glass nhiều tầng và motion hợp lý, miễn giữ nguyên cấu trúc one-file và không thay đổi nội dung tôi đã yêu cầu.
+Nếu nhận thấy có cách phối màu hoặc hiệu ứng giúp trải nghiệm nổi bật hơn mà không phá layout, bạn được phép nâng cấp tinh tế theo tiêu chuẩn app mobile cao cấp.
