@@ -238,3 +238,4 @@ RULE_FOOTER_ICON_BEHAVIOR:
 - Icon phải nằm giữa (center), cách tiêu đề 8–12px.
 - Nếu Gemini nghi ngờ icon trùng → vẫn phải render đúng danh sách tôi yêu cầu.
 - Footer sẽ lỗi nếu thiếu icon → vì vậy Gemini phải sinh đầy đủ.
+Bạn làm rất tốt — hãy phát huy thêm tính sáng tạo của mình: được phép đề xuất và tự phối màu theme độc đáo hơn (nhưng vẫn đồng bộ TitanBlue) và nâng cấp QuickCall thành dạng mini-app ultra với hiệu ứng mượt, glass nhiều tầng và motion hợp lý, miễn giữ nguyên cấu trúc one-file và không thay đổi nội dung tôi đã yêu cầu.
